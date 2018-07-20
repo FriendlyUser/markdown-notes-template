@@ -1,0 +1,16 @@
+createdAt: "2018-07-19T01:29:07.159Z"
+updatedAt: "2018-07-19T05:13:41.946Z"
+type: "SNIPPET_NOTE"
+folder: "5cef29a72e245ea24273"
+title: "Do not be empty"
+description: "Do not be empty"
+snippets: [
+  {
+    name: ""
+    mode: "text"
+    content: "test"
+  }
+]
+tags: []
+isStarred: false
+isTrashed: false

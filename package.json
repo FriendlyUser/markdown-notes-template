@@ -1,0 +1,29 @@
+{
+  "name": "BoostNote-Vuepress-template",
+  "version": "0.1.0",
+  "main": "index.js",
+  "description": "A example repo of taking notes of boostnote and then rendering them using vuepress.",
+  "repository": "",
+  "author": "FriendlyUser <pandabeareee@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vuepress",
+    "boostnote"
+  ],
+  "scripts": {
+    "docs:dev": "node node_modules/vuepress/bin/vuepress dev docs",
+    "docs:build": "node node_modules/vuepress/bin/vuepress.js build docs",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^0.12.0"
+  },
+  "dependencies": {
+    "markdown-it-admonition": "https://github.com/johannbre/markdown-it-admonition",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-plantuml": "^1.1.0",
+    "markdown-it-task-lists": "^2.1.1"
+  }
+}

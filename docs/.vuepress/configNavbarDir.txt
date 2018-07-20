@@ -1,0 +1,4 @@
+{ text: 'Home', link: '/' }, 
+{ text : '.vuepress', link: '/.vuepress/'}, 
+{ text : 'AI', link: '/AI/'}, 
+{ text : 'blockchain', link: '/blockchain/'}, 
