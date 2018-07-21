@@ -21,6 +21,7 @@
     "vuepress": "^0.12.0"
   },
   "dependencies": {
+    "directory-tree": "^2.1.0",
     "markdown-it-admonition": "https://github.com/johannbre/markdown-it-admonition",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-plantuml": "^1.1.0",

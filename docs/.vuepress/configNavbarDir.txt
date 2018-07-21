@@ -1,4 +1,3 @@
 { text: 'Home', link: '/' }, 
-{ text : '.vuepress', link: '/.vuepress/'}, 
-{ text : 'AI', link: '/AI/'}, 
-{ text : 'blockchain', link: '/blockchain/'}, 
+{ text : 'June and July 2018', link: '/June and July 2018/'}, 
+{ text : 'Test', link: '/Test/'}, 

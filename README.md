@@ -72,8 +72,9 @@ Can also write about how I tried out a lot of documentation formats, but boostno
 * Sample project configure for IOT, and other things.
 * improve python script to work with snippets
 * continuous deployment with gitlab
+* Think about latex integration, probably best to export to html and then convert to latex, or remove the !!! through scripting. (replace !!! note) with a environment, etc .. (using [pandoc-admonition plugin](https://github.com/chdemko/pandoc-latex-admonition/wiki) is good) as long as the header is included, see 
 
-##### REferences 
+##### References 
 
 https://github.com/vuejs/vuepress/issues/613
 
