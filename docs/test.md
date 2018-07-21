@@ -2,10 +2,10 @@
 # order of definition is important
 pandoc-latex-admonition:
   - color: firebrick
-    classes: [attention, danger,hint,error]
+    classes: [attention,danger,hint ,error,note,caution]
     position: right
     linewidth: 4
-  - classes: [attention]
+  - classes: [attention,hint,danger,hint,error,note,caution]
 ---
 
 
@@ -16,50 +16,50 @@ pandoc-latex-admonition:
 
 Only using the boostnote ones hmm.
 
-~~~attention more 
+:::attention  
 gays
-~~~
+:::
 
-~~~hint
+:::hint
 test man
-~~~
+:::
 
 ::: danger Next week's schedule
 This schedule is only valid for Spring 2019 (4B) at uvic, and shows what a typical week looks like, if you are viewing this after August 2019, then the dates are way off.
 :::
 
-~~~note cool
+:::note 
 Gay alliance
-~~~
+:::
 
-~~~error gay
+:::error 
 Gay sex 
-~~~
+:::
 
-~~~danger gay
+:::danger gay
 Gay sex 
-~~~
+:::
 
 
-~~~hint gay
+:::hint gay
 Gay sex 
-~~~
+:::
 
-~~~attention 
+:::attention 
 GAYER sex, cool as heck
-~~~
+:::
 
-~~~hint 
+:::hint 
 gays, I guess that's a situation
-~~~
+:::
 
-~~~note cool
+:::note cool
 WOW $x$
-~~~
+:::
 
-~~~caution cool 
+:::caution cool 
 test 
-~~~
+:::
 
 $x^2$
 

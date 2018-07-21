@@ -70,10 +70,14 @@ Can also write about how I tried out a lot of documentation formats, but boostno
 
 * Add chartjs support, based on boostnote support?
 * Sample project configure for IOT, and other things.
-* improve python script to work with snippets
+* improve python script to read boostnote snippters
 * continuous deployment with gitlab
-* Think about latex integration, probably best to export to html and then convert to latex, or remove the !!! through scripting. (replace !!! note) with a environment, etc .. (using [pandoc-admonition plugin](https://github.com/chdemko/pandoc-latex-admonition/wiki) is good) as long as the header is included, see 
+* Think about latex integration, probably best to export to html and then convert to latex, or remove the !!! through scripting. (replace !!! note) with a environment, etc .. (using [pandoc-admonition plugin](https://github.com/chdemko/pandoc-latex-admonition/wiki) which works as long as a yaml header is included, but fails to read !!!, could try using ::: format instead.
 
+
+```sh
+pandoc --from markdown+definition_lists+table_captions+multiline_tables+grid_tables+pipe_tables+pandoc_title_block --filter=pandoc-latex-admonition test.md --to latex -o testing56.tex
+```
 ##### References 
 
 https://github.com/vuejs/vuepress/issues/613
