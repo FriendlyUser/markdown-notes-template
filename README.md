@@ -10,6 +10,20 @@ Since both boostnote and vuepress are built on top of markdown-it, transferring 
 2. Create Boostnote storage in root
 3. Modify `config.js` under `docs/.vuepress/`, replace base with github directory, repo information with your username, etc .../
 
+and if you aren't serving the app from root, config the relative urls in override.styl like so,
+```styl 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/markdown-notes-template/fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/markdown-notes-template/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+    url(/markdown-notes-template/fonts/MaterialIcons-Regular.woff) format('woff'),
+    url(/markdown-notes-template/fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+```
 ## How to use 
 
 Obviously, one must have boostnote installed, with the storage pointed to the root directory.
