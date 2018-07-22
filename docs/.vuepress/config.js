@@ -68,7 +68,7 @@ function testing() {
 }
 
 module.exports = {
-  base: 'markdown-notes-template',
+  base: '/markdown-notes-template/',
   //theme: 'cool',
   //dest: 'dist',
   head: [
