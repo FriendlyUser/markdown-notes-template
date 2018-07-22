@@ -68,7 +68,7 @@ function testing() {
 }
 
 module.exports = {
-  base: '',
+  base: 'markdown-notes-template',
   //theme: 'cool',
   //dest: 'dist',
   head: [
@@ -90,25 +90,25 @@ module.exports = {
     sidebarDepth: 2,
     lastUpdated: 'Last Updated', // string | boolean
     // Assumes GitHub. Can also be a full GitLab url.
-    repo: 'FriendlyUser/ENGRYear4BNotes',
+    repo: 'FriendlyUser/markdown-notes-template',
     // Customising the header label
     // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
     repoLabel: 'Contribute!',
     // Optional options for generating "Edit this page" link
     // if your docs are in a different repo from your main project:
-    docsRepo: 'FriendlyUser/ENGRYear4BNotes',
+    //docsRepo: 'FriendlyUser/markdown-notes-template',
     // if your docs are not at the root of the repo:
-    docsDir: 'docs',
+    //docsDir: 'docs',
     // if your docs are in a specific branch (defaults to 'master'):
-    docsBranch: 'master',
+    docsBranch: 'gh-pages',
     // defaults to false, set to true to enable
     editLinks: true,
     // custom text for edit link. Defaults to "Edit this page"
     editLinkText: 'Help us improve this page!'
 
   },
-  title: 'ENGR Year 4B (UVIC)',
-  description: 'Selected computer engineering courses.',
+  title: 'Vuepress Notes',
+  description: 'Boostnote notes converted to Vuepress wiki',
   configureWebpack: {
     resolve: {
       alias: {
