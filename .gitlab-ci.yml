@@ -11,10 +11,10 @@ generate_docs:
     - pip install -r requirements.txt
     - python3 boostNote2MdGood.py
   artifacts:
-    paths: docs
+    paths: 
+      - docs
     expire_in: 1 week
     
-  
 gitlabPages:
   image: node:9.11.1
   stage: build
@@ -28,7 +28,8 @@ gitlabPages:
     - ls
     - echo "Highly unlikely their is gitlab pages, because I am using gitlab for CI/CD"
   artifacts:
-    paths: public
+    paths: 
+      - public
     expire_in: 1 week
   only:
   - master
@@ -45,6 +46,6 @@ githubPages:
     - git config user.email "$GITHUB_EMAIL"
     - git config --global user.name "$GITHUB_USERNAME"
     - git commit -m "Build from $CI_SERVER_NAME $CI_PIPELINE_ID"
-    - git push -f https://$GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_USERNAME/ENGRYear4BNotes.git master:gh-pages
+    - git push -f https://$GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_USERNAME/$CI_PROJECT_NAME.git master:gh-pages
   only:
     - master
