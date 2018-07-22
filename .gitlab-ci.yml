@@ -1,0 +1,50 @@
+stages:
+  - docs
+  - build
+  - deploy
+
+generate_docs:
+  image: python:3.6
+  stage: docs
+  script:
+    - apt-get update -q -y
+    - pip install -r requirements.txt
+    - python3 boostNote2MdGood.py
+  artifacts:
+    paths: docs
+    expire_in: 1 week
+    
+  
+gitlabPages:
+  image: node:9.11.1
+  stage: build
+  cache:
+    paths:
+    - node_modules/
+  script:
+    - yarn install
+    - yarn docs:build
+    - mv docs/.vuepress/dist public
+    - ls
+    - echo "Highly unlikely their is gitlab pages, because I am using gitlab for CI/CD"
+  artifacts:
+    paths: public
+    expire_in: 1 week
+  only:
+  - master
+
+   
+githubPages:
+  stage: deploy
+  script:
+    - cd public
+    # if you are deploying to a custom domain
+    # echo 'www.example.com' > CNAME
+    - git init
+    - git add -A
+    - git config user.email "$GITHUB_EMAIL"
+    - git config --global user.name "$GITHUB_USERNAME"
+    - git commit -m "Build from $CI_SERVER_NAME $CI_PIPELINE_ID"
+    - git push -f https://$GITHUB_USERNAME:$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_USERNAME/ENGRYear4BNotes.git master:gh-pages
+  only:
+    - master
