@@ -23,6 +23,7 @@
   "dependencies": {
     "directory-tree": "^2.1.0",
     "markdown-it-admonition": "https://github.com/johannbre/markdown-it-admonition",
+    "markdown-it-charts": "^1.0.5",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-plantuml": "^1.1.0",
     "markdown-it-task-lists": "^2.1.1"

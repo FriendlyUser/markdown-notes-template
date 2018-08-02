@@ -72,7 +72,10 @@ module.exports = {
   //theme: 'cool',
   //dest: 'dist',
   head: [
-    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }]
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
+    ['script',{src: `https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js`}],
+    ['script',{src: `https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js`}],
+    ['script', { src: `/markdown-notes-template/scripts/charting.js` }]
   ],
   themeConfig: {
     //logo: './myAvatar.png',
@@ -128,6 +131,7 @@ module.exports = {
       md.use(require("markdown-it-task-lists"));
       md.use(require("markdown-it-plantuml"));
       md.use(require("markdown-it-admonition"));
+      md.use(require("markdown-it-charts"));
       // use for easy syntax mermaid diagrams
  
     }

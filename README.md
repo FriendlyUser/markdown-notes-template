@@ -34,13 +34,38 @@ Additionally, vuepress must be installed globally.
 npm install --global vuepress 
 ```
 
+Or one can install the dependencies like so 
+
+
+Install the dependencies
+```sh
+pip -r requirements.txt
+yarn install
+```
+
 ## What does this template do
 
-Running the python script `boostNote2MdGood.py` transfers notes from boostnote into a selected directory
+Running the python script `boostNote2Md.py` transfers notes from boostnote into a selected directory
 
 ```sh
-python boostNote2MdGood.py -s notes -o docs
+python boostNote2Md.py -s notes -o docs
 ```
+
+
+Then extract all the notes and run vuepress
+```sh
+python boostNote2Md.py
+yarn docs:dev 
+```
+
+## Why Vuepress and Boostnote-notes-repo
+
+* They both use Markdown-it
+* Plugins are similar
+* Publishing a folder of boostnote notes is difficult
+
+Currently, if you have images in your boostnote notes, export the entire directory (images will be stored as attachments).
+
 
 Automatic builds via gitlab, using a two stage pipeline, one can convert boostnote notes to vuepress documentation deployed to either gitlab pages or github pages or netlify.
 
@@ -62,6 +87,10 @@ The boostnote plugins that are different are most likely
 - markdown-it-footnotes
 - markdown-it-kbd (don't know official name)
 
+### Other functionality of Boostnote 
+Some things are hard to replicate precisely using Vuepress for example the chart.js support in boostnote.
+
+A good approximatation is `markdown-it-charts` and cdning the dependencies.
 ##### Limitations
 The markdown-it katex plugin is a few versions behind the latest katex version.
 
@@ -90,7 +119,7 @@ Could improving automatic sidebar and navbar generation (detect if no README.md 
 * continuous deployment with gitlab
 * Think about latex integration, probably best to export to html and then convert to latex, or remove the !!! through scripting. (replace !!! note) with a environment, etc .. (using [pandoc-admonition plugin](https://github.com/chdemko/pandoc-latex-admonition/wiki) which works as long as a yaml header is included, but fails to read !!!, could try using ::: format instead.
 
-
+Add latex conversion, hard to get solidity code in there.
 ```sh
 pandoc --from markdown+definition_lists+table_captions+multiline_tables+grid_tables+pipe_tables+pandoc_title_block --filter=pandoc-latex-admonition test.md --to latex -o testing56.tex
 ```
