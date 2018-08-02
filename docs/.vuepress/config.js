@@ -75,7 +75,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
     ['script',{src: `https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js`}],
     ['script',{src: `https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js`}],
-    ['script', { src: `/markdown-notes-template/scripts/charting.js` }]
+    ['script', { src: `/scripts/charting.js` }]
   ],
   themeConfig: {
     //logo: './myAvatar.png',
