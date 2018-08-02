@@ -9,7 +9,7 @@ generate_docs:
   script:
     - apt-get update -q -y
     - pip install -r requirements.txt
-    - python3 boostNote2MdGood.py
+    - python3 boostNote2Md.py
   artifacts:
     paths: 
       - docs
