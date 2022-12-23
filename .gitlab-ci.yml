@@ -41,6 +41,7 @@ githubPages:
     - cd public
     # if you are deploying to a custom domain
     # echo 'www.example.com' > CNAME
+    - sed -i '6i <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2479144310234386" crossorigin="anonymous"></script>' **/*.html
     - git init
     - git add -A
     - git config user.email "$GITHUB_EMAIL"
